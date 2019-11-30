@@ -5,10 +5,26 @@
     </head>
     <body>
         <header>
-            <h1>Encryptor</h1>
+            <h1 style="text-align: left; margin-left: 1%; clear: right;">Encryptor</h1>
+            <form action="index.html">
+                <button>Home</button>
+            </form>
         </header>
-        <main>
-            
+        <main id="encryptorMain">
+            <h2>Enter Message:</h2>
+            <form>
+                <textarea name="" id="message" rows="3"></textarea>
+            </form>
+            <br>
+            <h2>
+                Enter Shift: 
+                <input id="shift" type="number" min="0" max="67" />
+            </h2>
+            <br>
+            <h2>Encrypted Message: </h2>
+            <form>
+                <textarea name="" id="encryptedMessage" rows="3" readonly></textarea>
+            </form>
         </main>
         <script src="script.js"></script>
     </body>

@@ -16,25 +16,28 @@ function main() {
 
     var splitMessage = message.split("");
 
-    var encryptedMessage = [];
+    if (document.title = "Encryptor") {
+        var encryptedMessage = [];
 
-    var shiftedIndex;
+        var shiftedIndex;
 
-    for (var i = 0; i < splitMessage.length; i++) {
-        shiftedIndex = chars.indexOf(splitMessage[i]) + shift;
-        console.log(shiftedIndex);
-        while (shiftedIndex >= chars.length) {
-            shiftedIndex = shiftedIndex - chars.length;
+        for (var i = 0; i < splitMessage.length; i++) {
+            if (chars.indexOf(splitMessage[i]) !== "-1") {
+                shiftedIndex = chars.indexOf(splitMessage[i]) + shift;
+                while (shiftedIndex >= chars.length) {
+                    shiftedIndex = shiftedIndex - chars.length;
+                }
+                while (shiftedIndex < 0) {
+                    shiftedIndex = shiftedIndex - chars.length;
+                }
+                encryptedMessage.push(chars[shiftedIndex]);
+            }
         }
-        while (shiftedIndex < 0) {
-            shiftedIndex = shiftedIndex - chars.length;
-        }
-        encryptedMessage.push(chars[shiftedIndex]);
-    }
     
-    document.getElementById("encryptedMessage").value = encryptedMessage.join("");
+        document.getElementById("encryptedMessage").value = encryptedMessage.join("");
+
+    }
 
 }
-
 
 var loop = setInterval(main, 100);

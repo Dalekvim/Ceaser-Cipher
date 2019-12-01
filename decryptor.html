@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Decryptor</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1 style="text-align: left; margin-left: 1%; clear: right;">Decryptor</h1>
+            <form action="index.html">
+                <button>Home</button>
+            </form>
+        </header>
+        <main id="encryptorMain">
+            <h2>Enter Encrypted Message:</h2>
+            <form>
+                <textarea name="" id="message" rows="3"></textarea>
+            </form>
+            <br>
+            <h2>
+                Enter Shift: 
+                <input id="shift" type="number" min="0" max="67" />
+            </h2>
+            <br>
+            <h2>The Message: </h2>
+            <form>
+                <textarea name="" id="decryptedMessage" rows="3" readonly></textarea>
+            </form>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

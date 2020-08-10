@@ -78,7 +78,6 @@ function main() {
                 if (decryptedMessage != []) {
                     console.log(decryptedMessage.join(""));
                     if (decryptedMessage.join("").includes(document.getElementById("word").value)) {
-                    //document.getElementById("decryptedMessage").value = decryptedMessage.join("");
                     decryptedMessages.push(decryptedMessage.join(""));
                     }
                 }
